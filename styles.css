@@ -1,0 +1,439 @@
+html{
+	font-size: 100%
+}
+
+body{
+	display: block;
+	margin: 0;
+	padding: 0;
+	color: #131313;
+	background: #f7c13a;
+	font-family: "Lato", sans-serif;
+}
+
+main{
+	padding-top: 80px;
+}
+@media screen and (min-width: 41em) {
+	main {
+		padding-top: 100px;
+	}
+}
+
+*, *::before, *::after{
+	box-sizing: border-box;
+}
+
+h1, h2{
+	margin: 0;
+}
+
+img{
+	box-sizing: content-box;
+}
+
+a, a:visited{
+	text-decoration: none;
+}
+
+hr{
+	display: block;
+	border: 1px solid #131313;
+	width: 100%;
+}
+@media screen and (min-width: 1180px){
+	hr{
+		width: 1px;
+	}
+}	
+
+.fa {
+  padding: 8px;
+  font-size: 40px;
+  width: 30px;
+  text-align: center;
+  text-decoration: none;
+  margin: 5px 2px;
+}
+
+.fa-facebook {
+    background: #131313;
+    color: white;
+}
+
+.fa:hover {
+    opacity: 0.7;
+}
+
+.wrapper{
+	display: block;
+	width: 100%;
+	max-width: 1100px;
+	margin: auto;
+}
+
+.noscroll{
+	overflow-y: hidden;
+}
+
+.text-center{
+	text-align: center;
+}
+
+.text-white{
+	color: #ffffff;
+}
+
+.block{
+	display: block;
+	position: relative;
+	max-width: 1200px;
+	margin: auto;
+	padding: 40px 20px;
+}
+@media screen and (min-width: 50em) {
+	.block{
+		padding: 40px 30px;
+		min-height: 600px;
+	}
+}
+
+.block.-fullwidth{
+	max-width: none;
+}
+
+.block-wrapper:nth-child(odd){
+	background-color: #131313;
+	color: #ffffff;
+}
+
+.block-content{
+	display: block;
+	position: relative;
+	width: 100%;
+}
+
+.block-content.-text{
+	margin: auto;
+	font-size: 1rem;
+	line-height: 1.8;
+}
+@media screen and (min-width: 50em){
+	.block-content.-text{
+		max-width: 80%;
+		font-size: 1.125rem;
+		padding: 1.5rem 0;
+	}
+}
+@media screen and (min-width: 62em){
+	.block-content.-text{
+		padding: 3rem 0;
+	}
+}
+
+.block-content h1{
+	font-family: "Bitter", serif;
+	font-size: 2.8125rem;
+	line-height: 1;
+	font-weight: normal;
+	margin: 0 0 1rem;
+	color: white;
+}
+@media screen and (min-width: 50em){
+	.block-content h1{
+		font-size: 7.5rem;
+	}
+}
+
+.block-content h2{
+	font-family: "Bitter", serif;
+	font-size: 1.75rem;
+	margin-bottom: 20px;
+}
+@media screen and (min-width: 50em){
+	.block-content h2{
+		font-size: 2.125rem;
+	}
+}
+
+.block-content .heading {
+	flex: 0 0 100%;
+    text-align: center;
+	font-size: 1.25rem;
+	font-weight: bold;
+	letter-spacing: 4px;
+	text-transform: uppercase;
+}
+
+.block-content .intro {
+	margin-bottom: 2rem;
+}
+
+.overlay {
+	position: absolute;
+	top: 0;
+	right: 0;
+	bottom: 0;
+	left: 0;
+	background-color: rgba(0, 0, 0, 0.5);
+}
+
+.offcanvas {
+	position: fixed;
+	width: 100%;
+	height: 100vh;
+	background-color: #36384c;
+	transform: translateX(100%);
+	transition: transform 400ms ease-in-out;
+	z-index: 10;
+	padding: 10px;
+}
+
+@media screen and (min-width: 41em) {
+	.offcanvas {
+		display: none;
+	}
+}
+
+.offcanvas.open {
+	transform: translateX(0%);
+}
+
+.offcanvas.close {
+	position: absolute;
+	width: 55px;
+	height: 55px;
+	top: 10px;
+	right: 8px;
+	padding: 0;
+	line-height: 1;
+}
+
+.offcanvas-close span {
+	display: block;
+	position: absolute;
+	background-color: white;
+	width: 30px;
+	height: 2px;
+}
+
+.offcanvas-close span:first-child {
+	transform: rotate(45deg);
+	top: 28px;
+	left: 12px;
+}
+
+.offcanvas-close span:last-child {
+	transform: rotate(-45deg);
+	top: 28px;
+	left: 12px;
+}
+
+.offcanvas-content {
+	text-align: center;
+	padding-top: 5rem;
+}
+
+.offcanvas-image {
+	margin-bottom: 20px;
+}
+
+.offcanvas-item {
+	display: block;
+	font-size: 1.25rem;
+	line-height: 2;
+	color: white;
+}
+
+.header {
+	position: fixed;
+	width: 100%;
+	padding: 10px;
+	background-color: #131313;
+	box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.25);
+	z-index: 10;
+}
+
+.header .wrapper {
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+}
+
+.header-image {
+	flex: 0 1 auto;
+	height: 60px;
+}
+@media screen and (min-width: 41em) {
+	.header-image {
+		height: 80px;
+	}
+}
+
+.header-nav{
+	flex: 0 1 auto;
+	display: none;
+}
+@media screen and (min-width: 41em) {
+	.header-nav {
+	display: block;
+	}
+}
+
+.header-nav-item {
+	font-size: 1.125rem;
+	color: white;
+	padding: 0 15px;
+	transition: color 150ms ease-in-out;
+}
+
+.header-nav-item:hover {
+	color: #f7c13a;
+}
+
+.header-open{
+	display: block;
+	padding: 12px;
+	width: 55px;
+	position: absolute;
+	right: 5px;
+}
+@media screen and (min-width: 41em) {
+	.header-open{
+		display: none;
+	}
+}
+
+.header-open span {
+	display: block;
+	background: white;
+	height: 2px;
+	width: 100%;
+	margin-bottom: 8px;
+}
+
+.header-open span:last-child {
+	margin-bottom: 0;
+}
+
+#home.block {
+  background-image: url(images/back.jpg);
+  background-size: cover;
+  background-position: center center;
+  background-repeat: no-repeat;
+}
+
+@media screen and (min-width: 50em){
+  #home .block-content {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translateX(-50%) translateY(-50%);
+    margin-top: -2rem;
+    }
+}
+
+#home .block-content h1>span{
+	color:#f7c13a;
+}
+
+#home .block-content h2{
+  font-family: "Lato", sans-serif;
+  font-size: 1.875rem;
+}
+
+#sobre .grid{
+	display: block;
+}
+@media screen and (min-width: 41em){
+	#sobre .grid{
+		display: flex;
+		flex-flow: row wrap;
+		justify-content: space-between;
+	}
+}
+
+#sobre .grid-item{
+	height: 200px;
+	width: 100%;
+	margin: 0 0 20px;
+	background-size: cover;
+	background-position: center center;
+}
+@media screen and (min-width: 41em){
+	#sobre .grid-item{
+		background-position: 0 -30px;
+	}
+}
+@media screen and (min-width: 60em){
+	#sobre .grid-item{
+		background-position: 0 -80px;
+	}
+}
+
+#produtos .grid{
+	display: block;
+}
+@media screen and (min-width: 41em){
+	#produtos .grid{
+		display: flex;
+		flex-flow: row wrap;
+		justify-content: space-between; 
+	}
+}
+
+#produtos .grid-item{
+	text-align: center;
+}
+@media screen and (min-width: 41em){
+	#produtos .grid-item{
+		width: 48%;
+	}
+}
+
+#produtos img {
+	height: 200px;
+}
+
+#produtos .grid-content p{
+	font-size: 1.0625rem;
+    margin: 0 0 2rem;
+    position: relative;
+    top: -50px;
+    background-color: #131313;
+}
+
+#contactos .grid{
+	display: block;
+}
+@media screen and (min-width: 1180px){
+    #contactos .grid{
+    	display: flex;
+    	flex-flow: row wrap;
+    	justify-content: flex-start;
+    }
+}
+
+#contactos .grid-item{
+    margin: 0 0 20px;
+    padding: 0 10px;
+    background-size: cover;
+    background-position: center center;
+}
+
+#contactos .grid-item.map img{
+    width: 100%;
+    max-width: 500px;
+}
+
+.media{
+	text-align: center;
+}
+
+footer{
+	padding: 20px 0;
+	text-align: center;
+	background-color: #f7c13a;
+	color: #131313;
+	font-size: 1rem;
+}
