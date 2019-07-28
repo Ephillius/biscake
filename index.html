@@ -10,7 +10,9 @@
 <body>
     <header class="header">
         <div class="wrapper">
-            <img class="header-image" src="images/logo.png" alt="" />
+            <a href="#">
+                <img class="header-image" src="images/logo.png" alt="" />
+            </a>
             <nav class="header-nav">
                 <a class="header-nav-item" data-scroll href="#sobre">Sobre</a>
                 <a class="header-nav-item" data-scroll href="#produtos">Produtos</a>
@@ -117,8 +119,7 @@
                 <div class="block-content -text">
                     <h2>Contactos</h2>
                     <div class="grid">
-                        <div class="grid-item map">
-                            <img src="images/mapa.png" alt="">
+                        <div id="map">
                         </div>
                         <div class="grid-item">
                             <header>Morada</header>
@@ -147,5 +148,7 @@
     <footer> &copy; 2011 biscake.com </footer>
 
     <script src="scripts.js"></script>
+    <script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyALKiMixbz3ns8pgjgG558MtFUQ_jbO-CY&callback=initMap">
+    </script>
 </body>
 </html>
