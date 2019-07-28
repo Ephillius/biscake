@@ -415,15 +415,17 @@ hr{
 }
 
 #contactos .grid-item{
-    margin: 0 0 20px;
-    padding: 0 10px;
-    background-size: cover;
-    background-position: center center;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+    margin-top: 20px;
 }
 
-#contactos .grid-item.map img{
+#map {
+	height: 400px;
     width: 100%;
-    max-width: 500px;
+    margin-bottom: 20px;
 }
 
 .media{
